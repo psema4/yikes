@@ -6,8 +6,9 @@
   "name": "yikes",
   "version": "1.0.0",
   "description": "Your Infinite Knowledge Entertainment System",
-  "main": "yikes.mjs",
+  "main": "src/yikes.mjs",
   "scripts": {
+    "start": "node src/yikes.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
