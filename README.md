@@ -89,6 +89,52 @@ YIKES is built with a modular architecture:
 - `src/characterCreation.mjs` - Character creation system
 - `src/yikes.mjs` - Main game loop and initialization
 
+### Testing
+
+The project includes comprehensive test coverage:
+
+```bash
+# Run all tests
+npm test
+
+# Run specific test suites
+npm run test:unit       # Unit tests
+npm run test:integration # Integration tests
+npm run test:e2e        # End-to-end tests
+
+# Run tests in watch mode
+npm run test:watch
+
+# Generate coverage report
+npm run test:coverage
+```
+
+#### Test Structure
+
+- **Unit Tests** (`src/__tests__/unit/`):
+  - Test individual components in isolation
+  - Validate core functionality
+  - Test state management and data handling
+
+- **Integration Tests** (`src/__tests__/integration/`):
+  - Test interaction between components
+  - Validate command processing
+  - Test LLM integration with mocked responses
+
+- **End-to-End Tests** (`src/__tests__/e2e/`):
+  - Test complete game flow
+  - Validate character creation process
+  - Test command handling and responses
+  - Verify error handling
+
+#### Writing Tests
+
+When adding new features:
+1. Add unit tests for new components
+2. Update integration tests if component interactions change
+3. Add e2e tests for new user-facing features
+4. Run the full test suite before submitting changes
+
 ## License
 
 ISC License
