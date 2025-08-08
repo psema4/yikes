@@ -39,16 +39,22 @@ class GameState {
   }
 
   addToInventory(item) {
-    this.state.inventory.push(item);
+    this.state = {
+      ...this.state,
+      inventory: [...this.state.inventory, item]
+    };
   }
 
   removeFromInventory(item) {
     const index = this.state.inventory.indexOf(item);
-    if (index > -1) {
-      this.state.inventory.splice(index, 1);
-      return true;
+    if (index === -1) {
+      return false;
     }
-    return false;
+    this.state = {
+      ...this.state,
+      inventory: this.state.inventory.filter(i => i !== item)
+    };
+    return true;
   }
 
   updateLocation(newLocation) {
