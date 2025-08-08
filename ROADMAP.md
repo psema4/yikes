@@ -91,6 +91,20 @@ While the current terminal-based implementation serves developers well, we need 
 - Need to maintain feature parity with terminal version
 - Consider security implications of web deployment
 
+## MUD
+
+### Description
+After implementing web support, adding a database to create a persistent multiplayer world should be relatively straightforward. This would transform YIKES from a single-player experience into a Multi-User Dungeon (MUD) where multiple players can connect and interact simultaneously.
+
+### Challenges
+- While initial proof-of-concept should be technically straightforward
+- Major security concerns:
+  - Prompt injection vulnerabilities
+  - Other LLM-based security issues
+  - Player-to-player interactions need safeguards
+- Database design for persistent world state
+- Concurrent player interaction handling
+
 ## Priority Order
 
 1. Modular Design
@@ -118,6 +132,10 @@ While the current terminal-based implementation serves developers well, we need 
    - Nice-to-have feature
    - Can be refined over time
 
+7. MUD
+   - Natural evolution after web implementation
+   - Requires careful security consideration
+
 ## Next Steps
 
 1. Design and implement modular architecture
@@ -126,3 +144,4 @@ While the current terminal-based implementation serves developers well, we need 
 4. Research web deployment options and small LLM models
 5. Fork and modify ascii-art-image library
 6. Continue refinement of music generation system
+7. Research LLM security best practices for multiplayer environments
