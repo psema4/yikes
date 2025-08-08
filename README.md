@@ -20,20 +20,29 @@ YIKES is a text-based adventure game engine powered by large language models. It
 ## Prerequisites
 
 - Node.js
-- [Ollama](https://ollama.ai/) with the dolphin3:8b model installed
+- [Ollama](https://ollama.ai/)
+  1. Follow the [Getting Started guide](https://github.com/ollama/ollama/tree/main/docs#getting-started) to install Ollama for your operating system
+  2. After installation, verify Ollama is working correctly by running a test model
+  3. Once verified, install the required model: `ollama pull dolphin3:8b`
 
 ## Installation
 
-1. Clone the repository:
+1. After installing and verifying Ollama is working correctly, clone the repository:
    ```bash
    git clone https://github.com/psema4/yikes.git
    cd yikes
    ```
 
-2. Install dependencies:
+2. Install Node.js dependencies:
    ```bash
    npm install
    ```
+
+3. Verify Ollama model installation:
+   ```bash
+   ollama list
+   ```
+   You should see `dolphin3:8b` in the list of installed models.
 
 ## Usage
 
